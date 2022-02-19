@@ -2,4 +2,4 @@
 ## Build guide
 - Clone the repo: `git clone https://github.com/SimpMC-Network/Velocity-MysqlDriverFix`
 - Build: `./gradlew build`
-Jar file is at 'builld/libs`
+Jar file is at `build/libs`
