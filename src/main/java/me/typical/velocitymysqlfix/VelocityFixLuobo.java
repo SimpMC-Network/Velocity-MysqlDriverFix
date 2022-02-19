@@ -32,17 +32,16 @@ public class VelocityFixLuobo {
         String jarName = "mysql-connector-java-" + version + ".jar";
         try {
             if (getClass("com.mysql.cj.jdbc.Driver") != null) return;
-            downloadFile("https://maven.aliyun.com/repository/public/mysql/mysql-connector-java/" + version + "/mysql-connector-java-" + version + ".jar", new File(dataFile, jarName));
+            downloadFile("https://repo1.maven.org/maven2/mysql/mysql-connector-java/" + version + "/mysql-connector-java-" + version + ".jar", new File(dataFile, jarName));
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error("MySql 驱动 贺兰大萝卜库 下载失败");
+            logger.error("Download from Maven failed");
         }
-//        反射入
         try {
             init();
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error("MySql 驱动 贺兰大萝卜库 反射加载失败");
+            logger.error("Download from Maven failed");
         }
         try {
             ClassLoader classLoader = this.getClass().getClassLoader();
@@ -50,12 +49,12 @@ public class VelocityFixLuobo {
             handle.invoke(classLoader, new File(dataFile, jarName).toURI().toURL());
         } catch (Throwable e) {
             e.printStackTrace();
-            logger.error("MySql 驱动 贺兰大萝卜库 反射加载失败");
+            logger.error("Download from Maven failed");
         }
         if (getClass("com.mysql.cj.jdbc.Driver") == null) {
-            logger.error("MySql 驱动 贺兰大萝卜库 反射加载失败");
+            logger.error("Download from Maven failed");
         } else {
-            logger.info("MySql 驱动 贺兰大萝卜库 加载成功");
+            logger.info("Download from Maven successfully and loaded");
         }
     }
 
@@ -147,7 +146,7 @@ public class VelocityFixLuobo {
                 byte[] b = new byte[1024];
                 int n;
                 while ((n = inputStream.read(b)) != -1) {
-                    fileOutputStream.write(b, 0, n);// 写入数据
+                    fileOutputStream.write(b, 0, n);
                 }
                 fileOutputStream.flush();
             }

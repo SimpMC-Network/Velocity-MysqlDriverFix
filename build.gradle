@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'fun.ksnb'
-version '1.0-HelanLuobo'
+group 'me.typical'
+version '1.0'
 
 repositories {
     mavenCentral()

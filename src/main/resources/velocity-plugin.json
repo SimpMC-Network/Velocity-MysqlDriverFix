@@ -1,10 +1,10 @@
 {
   "id": "velocitymysqlfix",
-  "name": "贺兰萝卜",
-  "version": "花心版",
+  "name": "sqlfix",
+  "version": "1.0",
   "authors": [
-    "ksqeib"
+    "typical"
   ],
   "dependencies": [],
-  "main": "fun.ksnb.hllb.velocity.main.VelocityFixLuobo"
+  "main": "me.typical.velocitymysqlfix.VelocityFix"
 }
