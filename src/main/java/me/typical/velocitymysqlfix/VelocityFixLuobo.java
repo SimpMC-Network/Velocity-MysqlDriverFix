@@ -1,4 +1,4 @@
-package fun.ksnb.hllb.velocity.main;
+package me.typical.velocitymysqlfix;
 
 import com.google.inject.Inject;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
